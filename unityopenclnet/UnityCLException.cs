@@ -3,6 +3,9 @@ using System;
 [System.Serializable]
 public class UnityCLException : System.Exception
 {
+		public UnityCLException(OpenCL.Net.ErrorCode error):base(UnityCL.ErrorText(error)){
+		}	
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:UnityCLException"/> class
 		/// </summary>
