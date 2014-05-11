@@ -7,7 +7,7 @@ public static class ProgramExtensions
 		var devices = self.GetDevices();
 		OpenCL.Net.ErrorCode logerror;
 		var log = OpenCL.Net.Cl.GetProgramBuildInfo(self,devices[0],OpenCL.Net.ProgramBuildInfo.Log, out logerror);
-		if (UnityCL.IsError(ErrorCode)){
+		if (UnityCL.IsError(logerror)){
 			throw new UnityCLException(logerror);
 		}
 		return log.ToString();
@@ -19,7 +19,7 @@ public static class ProgramExtensions
 		if (UnityCL.IsError(error)){
 			throw new UnityCLException(error);
 		}
-		var numDevices = numDevicesInfo.CastTo<uint>();
+		var numDevices = numDevicesInfo.CastTo<int>();
 		var devicesInfo = OpenCL.Net.Cl.GetProgramInfo(self,ProgramInfo.Devices,out error);
 		if (UnityCL.IsError(error)){
 			throw new UnityCLException(error);
