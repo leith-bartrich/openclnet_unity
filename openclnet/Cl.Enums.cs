@@ -177,6 +177,7 @@ namespace OpenCL.Net
         ReferenceCount = 0x1080,
         Devices = 0x1081,
         Properties = 0x1082,
+		DeviceCount = 0x1083,
     };
 
     public enum ChannelType : uint // cl_uint
