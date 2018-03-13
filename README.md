@@ -5,6 +5,8 @@ a slightly hacked up version of OpenCL.Net for use in Unity3D
 
 Please check the license.txt files in each subdirectory for licensing details for that component.
 
+As of 2018, I will not be maintaining this code.  I am moving away from Unity and to Unreal.  Feel free to adopt the project and fork the code.  Below information exists for legacy purposes:
+
 You may direct questions or concerns to FIE LLC:
 http://www.fie.us
 
